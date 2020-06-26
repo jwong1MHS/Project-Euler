@@ -6,7 +6,6 @@ starting_limit = 10
 cycle_limit = limit
 max_cycle = 0
 max_denominator = 2
-array = []
 
 def recurring_cycle(parseddecimal):
     for starting in range(starting_limit):
@@ -15,7 +14,6 @@ def recurring_cycle(parseddecimal):
             str2 = parseddecimal[starting+cycle: starting+2*cycle]
             str3 = parseddecimal[starting+2*cycle: starting+3*cycle]
             if (str1 == str2 and str2 == str3 and str1 != '' and str2 != '' and str3 != ''):
-                array.append(starting)
                 return cycle
     return 0
 
@@ -27,4 +25,4 @@ for i in range(2, limit):
         max_cycle = cycle
         max_denominator = i
 
-print(max(array))
+print(max_denominator)
