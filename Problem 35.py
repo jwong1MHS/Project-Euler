@@ -6,9 +6,8 @@ prime = 2
 circularList = []
 
 def circular_prime(num):
-    numList, rotationsList = [], []
-    for digit in str(num):  #adds each digit of the prime to a list
-        numList.append(digit)
+    rotationsList = []
+    numList = [digit for digit in str(num)] #adds each digit of the prime to a list
     A = deque(numList)
     for i in range(len(A)): #creates each rotation of a number
         rotationsList.append(int(''.join(A)))
