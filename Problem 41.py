@@ -7,9 +7,7 @@ maxprime = 2
 def pandigital(num):
     pandigitalList = [(x+1) for x in range(len(str(num)))]
     temp = sorted([int(x) for x in str(num)])
-    if (temp == pandigitalList):
-        return True
-    return False
+    return (temp == pandigitalList)
 
 while (prime < limit):
     if (pandigital(prime)):
